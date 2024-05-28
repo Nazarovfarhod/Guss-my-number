@@ -73,6 +73,9 @@ checkEl.addEventListener("click", checkNumber);
 againEl.addEventListener("click", refresh);
 document.addEventListener("keydown", (e) => {
   if (e.keyCode == 13) {
+    if (attamps == 0) {
+      e.keyCode.disabled = true;
+    }
     checkNumber();
   }
 });
