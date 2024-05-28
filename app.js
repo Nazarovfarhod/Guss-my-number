@@ -24,6 +24,7 @@ let checkNumber = () => {
     new Audio("./musics/brass-fanfare.mp3").play();
     checkEl.disabled = true;
     if (record < attamps) {
+      record = attamps;
       recordEl.textContent = attamps;
     }
   } else if (inputVal < rendomNumber) {
@@ -41,6 +42,7 @@ let checkNumber = () => {
     commonNumberEl.classList.add("bg-red-300");
     wrapperEl.classList.add("bg-red-200");
     checkEl.disabled = true;
+    commonNumberEl.textContent = rendomNumber;
     new Audio("./musics/brass-fail.mp3").play();
   }
   inputEl.value = "";
